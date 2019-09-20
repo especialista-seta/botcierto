@@ -25,7 +25,7 @@ public class Controller {
     public String postBotciertos(@RequestBody Update update) {
 
         String editedMessage =
-            update.getMessage().getText().contains("/bocierto") ? update.getMessage().getText()
+            update.getMessage().getText().contains("/botcierto") ? update.getMessage().getText()
                 .replace("/botcierto", "") : update.getMessage().getText();
         post.post(editedMessage, update.getMessage().getChat().getId());
         return "{botcierto}";
