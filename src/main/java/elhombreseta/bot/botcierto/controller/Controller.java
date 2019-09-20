@@ -1,12 +1,14 @@
 package elhombreseta.bot.botcierto.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@org.springframework.stereotype.Controller
+@RestController("/bot")
 public class Controller {
 
-    @RequestMapping("/botcierto")
+    @RequestMapping(value = "/botcierto", method = RequestMethod.GET)
     public String getBotciertos() {
-        return "botcierto";
+        return "{botcierto}";
     }
 }
