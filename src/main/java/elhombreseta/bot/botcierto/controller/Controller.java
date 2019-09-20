@@ -23,7 +23,6 @@ public class Controller {
 
     @RequestMapping(value = "/botcierto", method = RequestMethod.POST)
     public String postBotciertos(@RequestBody Update update) {
-
         String editedMessage =
             update.getMessage().getText().contains("/botcierto") ? update.getMessage().getText()
                 .replace("/botcierto", "") : update.getMessage().getText();
