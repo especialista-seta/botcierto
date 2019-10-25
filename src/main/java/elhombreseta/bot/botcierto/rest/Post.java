@@ -13,7 +13,7 @@ public class Post {
 
         HttpEntity<Response> request = new HttpEntity<>(new Response(message, chatId));
 
-        restTemplate.postForEntity(
+        restTemplate.postForObject(
             "https://api.telegram.org/bot947427046:AAFfe_45SEIW6C4--ztf6rip8PaHcx1dpDc/sendMessage",
             request, String.class);
     }

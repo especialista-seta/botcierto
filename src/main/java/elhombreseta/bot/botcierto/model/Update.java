@@ -6,20 +6,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Update {
 
-    private final String update_id;
+    private final String id;
 
     private final Message message;
 
     public Update(
-        @JsonProperty("update_id") String update_id,
+        @JsonProperty("update_id") String id,
         @JsonProperty("message") Message message) {
 
-        this.update_id = update_id;
+        this.id = id;
         this.message = message;
     }
 
-    public String getUpdate_id() {
-        return update_id;
+    public String getId() {
+        return id;
     }
 
     public Message getMessage() {

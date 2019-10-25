@@ -22,11 +22,7 @@ public class Controller {
     }
 
     @RequestMapping(value = "/botcierto", method = RequestMethod.POST)
-    public String postBotciertos(@RequestBody Update update) {
-        String editedMessage =
-            update.getMessage().getText().contains("/botcierto") ? update.getMessage().getText()
-                .replace("/botcierto", "") : update.getMessage().getText();
-        post.post(editedMessage, update.getMessage().getChat().getId());
-        return "{botcierto}";
+    public void postBotciertos(@RequestBody Update update) {
+        post.post(update.getMessage().getText(), update.getMessage().getChat().getId());
     }
 }
