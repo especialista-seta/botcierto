@@ -16,4 +16,12 @@ public class Response implements Serializable {
         this.text = text;
         this.chat_id = chat_id;
     }
+
+    @Override
+    public String toString() {
+        return "Response{" +
+            "text='" + text + '\'' +
+            ", chat_id=" + chat_id +
+            '}';
+    }
 }

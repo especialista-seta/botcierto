@@ -24,4 +24,13 @@ public class Message {
     public Chat getChat() {
         return chat;
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+            "text='" + text + '\'' +
+            ", chat=" + chat +
+            '}';
+    }
+
 }

@@ -15,4 +15,11 @@ public class Chat {
     public Integer getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Chat{" +
+            "id=" + id +
+            '}';
+    }
 }
